@@ -51,12 +51,22 @@ public class ReturnArrayOfSquaresSorted {
 
     //Solution 3: time= O(n) space= O(n)
     public int[] sortedSquaresTimeOptimized(int[] numbers) {
+
+        if(null == numbers || numbers.length == 0){
+            throw new IllegalArgumentException("Invalid received array: " + Arrays.toString(numbers));
+        }
+
         int [] result = new int[numbers.length];
         int start = 0;
         int end = numbers.length - 1;
-        int whereToInsert = end; // insert position.
+        int whereToInsert = end;
 
-        while (start <= end) { // <  or <=  ?   be careful about ==
+        if(start == end){
+            numbers[start] *= numbers[start];
+            return numbers;
+        }
+
+        while (start <= end) {
             int sqrtLeft = numbers[start] * numbers[start];
             int sqrtRight = numbers[end] * numbers[end];
 
