@@ -18,6 +18,7 @@ public class MoveZerosToEndTest {
         int[] expected = {4,9,16,25,0,0,0};
         Assert.assertArrayEquals(zerosShifter.moveZerosToEnd(new int[]{4,0,0,9,0,16,25}), expected);
     }
+
     @Test
     public void givenNullOrEmptyArray_whenMoveZerosInvoked_thenThrowException(){
         Assert.assertThrows(IllegalArgumentException.class, () -> zerosShifter.moveZerosToEnd(new int[]{}));
