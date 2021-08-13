@@ -21,6 +21,10 @@ public class ShortestPathWithObstacle {
      *  output = 10 steps
      * */
 
+    /**
+     * @hint graph is represented as an adjacency matrix
+     * */
+
     int[] rowDirection = {-1,1,0,0};
     int[] colDirection = {0,0,-1,1};
 
