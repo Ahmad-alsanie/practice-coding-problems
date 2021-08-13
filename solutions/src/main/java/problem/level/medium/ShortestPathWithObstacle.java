@@ -11,9 +11,9 @@ public class ShortestPathWithObstacle {
 
     /**
      * @Example
-     * input: [ ['o','o','o','o','o']
-     *          ['x','x','x','x','o']
-     *          ['T','o','o','o','o']]
+     * input: [ [0,0,0,0,0]
+     *          [8,8,8,8,0]
+     *          [1,0,0,0,0]]
      *  o=traversable
      *  x=obstacle
      *  T=target
@@ -25,9 +25,9 @@ public class ShortestPathWithObstacle {
     int[] colDirection = {0,0,-1,1};
 
 
-    public int getShortestPath(char[][] graph, char obstacle, char target){
+    public int getShortestPath(int[][] graph, int obstacle, int target){
 
-        if(null == graph || graph.length == 0){
+        if(null == graph || graph.length == 0 || graph[0].length == 0){
             throw new IllegalArgumentException("graph cannot be null or empty");
         }
 
@@ -67,11 +67,11 @@ public class ShortestPathWithObstacle {
         return -1;
     }
 
-    private boolean isTraversable(int[][] distances, char[][] graph, int newRow, int newCol, char obstacle) {
-        return distances[newRow][newCol] == -1 && graph[newRow][newRow] != obstacle;
+    private boolean isTraversable(int[][] distances, int[][] graph, int newRow, int newCol, int obstacle) {
+        return distances[newRow][newCol] == -1 && graph[newRow][newCol] != obstacle;
     }
 
-    public boolean isWithinGraph(char[][] graph, int newCol, int newRow){
+    public boolean isWithinGraph(int[][] graph, int newCol, int newRow){
         return (newRow >= 0 && newRow < graph.length) && (newCol >= 0 && newCol < graph[0].length);
     }
 

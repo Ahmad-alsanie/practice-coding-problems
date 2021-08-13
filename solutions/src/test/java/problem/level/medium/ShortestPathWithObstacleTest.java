@@ -15,10 +15,16 @@ public class ShortestPathWithObstacleTest {
 
     @Test
     public void givenGraphWithObstacle_whenShortestPathInvoked_thenReturnShortestPathDistance(){
-        char[][] graph = {{'o','o','o','o','o'},
-                          {'x','x','x','x','o'},
-                          {'T','o','o','o','o'}};
-        Assert.assertEquals(10, shortestPath.getShortestPath(graph,'x','T'));
+        int[][] graph ={{0,0,0,0,0},
+                        {8,8,8,8,0},
+                        {1,0,0,0,0}};
+        Assert.assertEquals(10, shortestPath.getShortestPath(graph,8,1));
     }
 
+    @Test
+    public void givenNullOrEmptyGraph_whenShortestPathInvoked_thenThrowException(){
+        int[][] graph ={{},{},{}};
+        Assert.assertThrows(IllegalArgumentException.class,
+                ()->shortestPath.getShortestPath(graph,8,1));
+    }
 }
