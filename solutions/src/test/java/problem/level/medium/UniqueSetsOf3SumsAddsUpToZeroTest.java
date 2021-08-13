@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class UniqueSetsOf3SumsAddsUpToZero {
+public class UniqueSetsOf3SumsAddsUpToZeroTest {
 
     AllUniqueSetsOf3SumsAddUpToZero uniqueSets;
 
