@@ -6,7 +6,8 @@ public class ShortestPathWithObstacle {
 
     /**
      * @Description
-     * given a 2D array representing a graph with a target and obstacles, find shortest path between origin (0,0) and target
+     * given a 2D array representing a graph with a target and obstacles,
+     * find shortest path between origin (0,0) and target
      * */
 
     /**

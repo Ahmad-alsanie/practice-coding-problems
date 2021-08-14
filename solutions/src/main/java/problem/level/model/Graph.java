@@ -15,9 +15,16 @@ public class Graph {
             adjacency[i] = new LinkedList();
     }
 
-    // Function to add an edge into the graph
-    void addEdge(int vertices,int weight)
+    public void addEdge(int vertices, int weight)
     {
         adjacency[vertices].add(weight);
+    }
+
+    public int getVertices() {
+        return vertices;
+    }
+
+    public LinkedList<Integer>[] getAdjacency() {
+        return adjacency;
     }
 }
