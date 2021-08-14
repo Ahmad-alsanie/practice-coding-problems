@@ -47,9 +47,6 @@ public class ShiftElementsOfArrayToRightKPlaces {
         for (int i = 0; i < nums.length; i++) {
             result[(i + k) % nums.length] = nums[i];
         }
-        for (int i = 0; i < nums.length; i++) {
-            nums[i] = result[i];
-        }
         return result;
     }
 }
