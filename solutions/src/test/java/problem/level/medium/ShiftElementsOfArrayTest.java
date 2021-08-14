@@ -18,4 +18,11 @@ public class ShiftElementsOfArrayTest {
         int[] numbers = {1,2,3,4,5,6,7};
         Assert.assertArrayEquals(expected, shift.rotate(numbers, 3));
     }
+
+    @Test
+    public void givenArrayOfNumbersAndShiftFactor_whenRotate2Invoked_thenRotateArray(){
+        int[] expected = {5,6,7,1,2,3,4};
+        int[] numbers = {1,2,3,4,5,6,7};
+        Assert.assertArrayEquals(expected, shift.rotate2(numbers, 3));
+    }
 }
