@@ -16,13 +16,13 @@ public class ArrayOfSquaresSortedTest {
     @Test
     public void givenValidMixedNegativePositiveArray_whenSortedSquaresInvoked_thenReturnSortedSqrtValuesSorted(){
         int[] expected = {4,9,16,25};
-        Assert.assertArrayEquals(sqrt.sortedSquaresTimeOptimized(new int[]{-3,-2,4,5}), expected);
+        Assert.assertArrayEquals(expected, sqrt.sortedSquaresTimeOptimized(new int[]{-3,-2,4,5}));
     }
 
     @Test
     public void givenValidPositiveArray_whenSortedSquaresInvoked_thenReturnSortedSqrtValuesSorted(){
         int[] expected = {4,9,16,25};
-        Assert.assertArrayEquals(sqrt.sortedSquaresTimeOptimized(new int[]{2,3,4,5}), expected);
+        Assert.assertArrayEquals(expected, sqrt.sortedSquaresTimeOptimized(new int[]{2,3,4,5}));
     }
 
     @Test
@@ -34,7 +34,7 @@ public class ArrayOfSquaresSortedTest {
     @Test
     public void givenValidOneElementArray_whenSortedSquaresInvoked_thenReturnSortedSqrtValue(){
         int[] expected = {4};
-        Assert.assertArrayEquals(sqrt.sortedSquaresTimeOptimized(new int[]{2}), expected);
+        Assert.assertArrayEquals(expected, sqrt.sortedSquaresTimeOptimized(new int[]{2}));
     }
 
 }
