@@ -16,8 +16,9 @@ public class HowManySubArraysAddsUpToTarget {
      * */
 
     public int numberOfSubArrayEqualsTarget(int[] numbers, int target) {
-        int count = 0, sum = 0;
-        HashMap<Integer,Integer> map = new HashMap < > ();
+        int count = 0;
+        int sum = 0;
+        final HashMap<Integer,Integer> map = new HashMap <>();
         map.put(0, 1);
 
         for (int i = 0; i < numbers.length; i++) {
