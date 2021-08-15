@@ -40,10 +40,9 @@ public class IntersectionOfTwoArrays {
         }
         int current = 0;
         for (int number : nums2) {
-            int count = frequency.getOrDefault(number, 0);
-            if (count > 0) {
+            if (frequency.containsKey(number) && frequency.get(number) > 0) {
                 nums1[current] = number;
-                frequency.put(number, count - 1);
+                frequency.put(number, frequency.get(number) - 1);
                 current++;
             }
         }

@@ -19,4 +19,18 @@ public class IntersectionOfTwoArraysTest {
         int[] expected = new int[]{2,2};
         Assert.assertArrayEquals(expected,intersection.intersect(given,expected));
     }
+
+    @Test
+    public void givenTwoArrays_whenIntersectionInvoked_thenReturnLongestIntersection(){
+        int[] given = new int[]{1,2,2,1,3,4,5,2,2};
+        int[] expected = new int[]{1,3,4};
+        Assert.assertArrayEquals(expected,intersection.intersect(given,expected));
+    }
+
+    @Test
+    public void givenTwoArraysWithNegativeNumbers_whenIntersectionInvoked_thenReturnLongestIntersection(){
+        int[] given = new int[]{1,2,-2,-1,-3,-4,5,2,2};
+        int[] expected = new int[]{-1,-3,-4};
+        Assert.assertArrayEquals(expected,intersection.intersect(given,expected));
+    }
 }
