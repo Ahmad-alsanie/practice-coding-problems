@@ -18,4 +18,11 @@ public class NumberOfSubArraysAddsUpToTargetTest {
         Assert.assertEquals(3,
                 subArraysAddsUpToTarget.numberOfSubArrayEqualsTarget(numbers, 9));
     }
+
+    @Test
+    public void givenArrayOfEqualNumbers_whenNumberOfSubArraysInvoked_thenReturnNumberOfSubArraysAddsUpToTarget(){
+        int[] numbers = new int[]{1,1,1};
+        Assert.assertEquals(2,
+                subArraysAddsUpToTarget.numberOfSubArrayEqualsTarget(numbers, 2));
+    }
 }
