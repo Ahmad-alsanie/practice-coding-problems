@@ -13,7 +13,7 @@ public class UniqueEmailAddressesTest {
     }
 
     @Test
-    public void test(){
+    public void givenEmailsList_whenUniqueEmailAddressInvoked_thenReturnNumberOfUniqueEmails(){
         final String[] emails = {"test.email+alex@leetcode.com","test.e.mail+bob.cathy@leetcode.com","testemail+david@lee.tcode.com"};
         final String[] emails2 = {"a@leetcode.com","b@leetcode.com","c@leetcode.com"};
         final String[] emails3 = {"test.emailleet@code.com","test.email@leetcode.com",};
