@@ -1,4 +1,4 @@
-package problem.level.model;
+package problem.level.concepts.and.datastructures;
 
 import java.util.LinkedList;
 

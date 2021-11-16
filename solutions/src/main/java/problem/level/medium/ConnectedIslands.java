@@ -1,6 +1,6 @@
 package problem.level.medium;
 
-import problem.level.model.Graph;
+import problem.level.concepts.and.datastructures.Graph;
 
 import java.util.LinkedList;
 import java.util.Queue;

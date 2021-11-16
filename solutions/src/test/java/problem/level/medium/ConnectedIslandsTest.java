@@ -3,7 +3,7 @@ package problem.level.medium;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import problem.level.model.Graph;
+import problem.level.concepts.and.datastructures.Graph;
 
 public class ConnectedIslandsTest {
     private ConnectedIslands islands;
