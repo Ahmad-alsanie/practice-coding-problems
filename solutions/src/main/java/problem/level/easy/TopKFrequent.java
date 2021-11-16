@@ -1,9 +1,6 @@
 package problem.level.easy;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class TopKFrequent {
 
@@ -20,35 +17,31 @@ public class TopKFrequent {
      * Input: nums = [1], k = 1
      * Output: [1]
      * **/
-    public int[] topKFrequent(int[] numbers, int k) {
-        // O(1) time
-        if (k == numbers.length) {
-            return numbers;
+    public int[] topKFrequent(int[] nums, int k) {
+        int[] result = new int[k];
+        Map<Integer, Integer> frequency = new HashMap<>();
+
+        Queue<Map.Entry<Integer, Integer>> minHeap =
+                new PriorityQueue<>(Comparator.comparingInt(Map.Entry::getValue));
+
+        for(int number: nums){
+            if(frequency.containsKey(number)){
+                frequency.put(number, frequency.get(number) + 1);
+            }else{
+                frequency.put(number, 1);
+            }
         }
 
-        // 1. build hash map : character and how often it appears
-        // O(N) time
-        Map<Integer, Integer> count = new HashMap<>();
-        for (int n: numbers) {
-            count.put(n, count.getOrDefault(n, 0) + 1);
+        for(Map.Entry<Integer, Integer> entry: frequency.entrySet()){
+            minHeap.add(entry);
+            if(minHeap.size() > k){
+                minHeap.poll();
+            }
         }
 
-        // init heap 'the less frequent element first'
-        Queue<Integer> minHeap = new PriorityQueue<>();
-
-        // 2. keep k top frequent elements in the heap
-        // O(N log k) < O(N log N) time
-        for (int n: count.keySet()) {
-            minHeap.add(n);
-            if (minHeap.size() > k) minHeap.poll();
+        for(int i = 0; i < k; i++){
+            result[i] = minHeap.poll().getKey();
         }
-
-        // 3. build an output array
-        // O(k log k) time
-        int[] top = new int[k];
-        for(int i = k - 1; i >= 0; --i) {
-            top[i] = minHeap.poll();
-        }
-        return top;
+        return result;
     }
 }
