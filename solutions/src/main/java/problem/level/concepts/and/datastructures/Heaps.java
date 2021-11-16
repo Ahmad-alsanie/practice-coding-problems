@@ -2,10 +2,50 @@ package problem.level.concepts.and.datastructures;
 
 public class Heaps {
     /**
-     * Insertion & deletion for a min heap: (must satisfy 2 condition to do an insertion)
+     * Insertion & deletion for a min heap: (must satisfy 2 condition to do an insertion) O(height) = O(logn)
      * 1- check if the tree is a complete binary tree (children are inserted from top to bottom and left to right)
      *
      * 2- each node should be <= to the value of its children -if not switch them-
+     * */
+
+    /**
+     * Creation: the trick is to heapify to take O(n)
+     * 1- turn your input into binary tree
+     * 2- heapify by applying (each node should be <= to the value of its children -if not switch them-) rule
+     * MEANING: exchange node with its smallest child
+     * **/
+
+    /**
+     * Applications:
+     * Heap Sort
+     * The Top-K problem
+     * The K-th element
+     * */
+
+    /**
+     * The Top K Problem - Approach 1
+     * Use the Heap data structure to obtain Top K’s largest or smallest elements.
+     *
+     * Solution of the Top K largest elements:
+     *
+     * Construct a Max Heap.
+     * Add all elements into the Max Heap.
+     * Traversing and deleting the top element (using pop() or poll() for instance), and store the value into the result array T.
+     * Repeat step 3 until we have removed the K largest lements.
+     * Solution of the Top K smallest elements:
+     *
+     * Construct a Min Heap.
+     * Add all elements into the Min Heap.
+     * Traversing and deleting the top element (using pop() or poll() for instance), and store the value into the result array T.
+     * Repeat step 3 until we have removed the K smallest elements.
+     * Complexity Analysis:
+     *
+     * Time complexity: O(KlogN+N)
+     *
+     * Steps one and two require us to construct a Max Heap which requires O(N) time using the previously discussed heapify method. Each element removed from the heap requires O(logN) time; this process is repeated KK times. Thus the total time complexity is O(KlogN+N).
+     * Space complexity: O(N)
+     *
+     * After step 2, the heap will store all NN elements.
      * */
 
     // Implementing "Min Heap"
