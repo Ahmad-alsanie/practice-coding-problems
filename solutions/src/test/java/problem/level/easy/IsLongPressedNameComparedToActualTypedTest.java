@@ -3,6 +3,7 @@ package problem.level.easy;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import problem.level.medium.IsLongPressedNameComparedToActualTyped;
 
 public class IsLongPressedNameComparedToActualTypedTest {
     private IsLongPressedNameComparedToActualTyped longPressed;

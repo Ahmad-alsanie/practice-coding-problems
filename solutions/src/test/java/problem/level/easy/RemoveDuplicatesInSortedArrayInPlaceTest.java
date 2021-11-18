@@ -5,11 +5,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class RemoveDuplicatesInSortedArrayInPlaceTest {
-    private RemoveDuplicatesInPlaceAndReturnIndexOfLastElementWithoutDuplicates duplicates;
+    private RemoveDuplicatesInPlaceSortedArrayAndReturnIndexOfLastElementWithoutDuplicates duplicates;
 
     @Before
     public void init(){
-        duplicates = new RemoveDuplicatesInPlaceAndReturnIndexOfLastElementWithoutDuplicates();
+        duplicates = new RemoveDuplicatesInPlaceSortedArrayAndReturnIndexOfLastElementWithoutDuplicates();
     }
 
     @Test

@@ -1,6 +1,6 @@
 package problem.level.easy;
 
-public class RemoveDuplicatesInPlaceAndReturnIndexOfLastElementWithoutDuplicates {
+public class RemoveDuplicatesInPlaceSortedArrayAndReturnIndexOfLastElementWithoutDuplicates {
     /**
      * @Description
      * shift duplicates to the end of the array and return index of last element
@@ -21,18 +21,13 @@ public class RemoveDuplicatesInPlaceAndReturnIndexOfLastElementWithoutDuplicates
      * */
 
     public int removeDuplicates(int[] nums) {
-        int length = nums.length;
-        if(length == 0)
-            return 0;
-        int next = 1;
-        int start = nums[0];
-        for(int i = 1; i < length; i++){
-            if(nums[i] != start){
-                start = nums[i];
-                nums[next] = nums[i];
-                next++;
+        int previous = 0;
+        for(int i=0; i < nums.length; i++){
+            if(nums[i] != nums[previous]){
+                previous++;
+                nums[previous] = nums[i];
             }
         }
-        return next;
+        return previous+1;
     }
 }

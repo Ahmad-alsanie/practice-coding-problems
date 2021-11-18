@@ -1,4 +1,4 @@
-package problem.level.easy;
+package problem.level.medium;
 
 public class IsLongPressedNameComparedToActualTyped {
 
