@@ -15,6 +15,15 @@ public class HowManySubArraysAddsUpToTarget {
      * output: []
      * */
 
+    /**
+     * @hint accumulative sum + hashing to store (sum, count: which is
+     *       old count + count " usually 1 if no occurrences"
+     *       which is stored in map to indicate a match )
+     *
+     *      original rule: accumSum[i] - accumSum[j] = 0 to match sub containing 0
+     *      derived rule: accumSum[i] - accumSum[j] = k to match sub containing k
+     * */
+
     public int numberOfSubArrayEqualsTarget(int[] numbers, int target) {
         int count = 0;
         int sum = 0;
