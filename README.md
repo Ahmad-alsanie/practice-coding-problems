@@ -1,11 +1,12 @@
 # Coding Problems Primer
 Learn how to approach coding problems
-
+****
 ## Prep for coding interviews
 To get the most of this repository, navigate to [study guide](#Study Guide) before start solving issues.
 Under main solution project there are a set of Java solutions for commonly asked interview coding problems. 
 You can try to remove the code and write your own then run the tests. 
 The purpose of this repo is not just for you to navigate through solutions and tests rather to apply what is being discussed in [study guide](#Study Guide) below and be able to tackle any problem with the right approach.
+****
 
 ### How to navigate solution module
 - Each package specifies the level of questions inside
@@ -15,22 +16,24 @@ The purpose of this repo is not just for you to navigate through solutions and t
     - example input/output
     - time & space complexity
     - hints
-
+****
 ## Study Guide
+<br/>
+
 **What's an algorithm?**
 
 A procedure to accomplish a specific task (transform a set of inputs into desired output).
 <br/>
-
+****
 **What can we consider as an algorithmic problem?**
 
 A problem that's specified by describing the complete set of instances it must work on.
 <br/>
-
+****
 **Example on a well-defined algorithmic problem?**
 
 Sorting: a sequence of `n` entries `X1, X2, ... Xn`, where the desired output is: `X1' <= X2' <= ... <= Xn'`
-
+****
 **Insertion sort**
 
 ![](solutions/src/main/resources/gifs/insertion-sort.gif)
@@ -54,10 +57,14 @@ class Solution{
 ```
 <br/>
 
+****
+
 **Properties of a good algorithm?**
 - Correct
 - Efficient
 - Easy to implement
+
+<br/>
 
 ****
 
@@ -69,3 +76,6 @@ class Solution{
 
 ## Contact 
 Feel free to contact me to discuss any issues, questions, or comments.
+
+#### Interested in contributing to this project? 
+[Here is how to...](https://docs.github.com/en/get-started/quickstart/contributing-to-projects#about-forking)
