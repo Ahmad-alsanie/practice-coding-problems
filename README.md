@@ -68,6 +68,59 @@ class Solution{
 
 ****
 
+**What's obvious IS NOT necessary correct?**
+
+A proof of correctness should be conducted by adding proper tests that cover all edge cases where any input received by your algorithm should produce the desired output.
+
+Examples on [heuristics](https://en.wikipedia.org/wiki/Heuristic_(computer_science)#:~:text=A%20heuristic%20function%2C%20also%20simply,may%20approximate%20the%20exact%20solution.) that obviously solves some variation of the problem but remains incorrect:
+- Shortest path in a finite weighted graph solved by [nearest neighbor heuristic](https://stemlounge.com/animated-algorithms-for-the-traveling-salesman-problem/#:~:text=The%20nearest%20neighbor%20heuristic%20is,returns%20to%20the%20starting%20city.)
+
+![](solutions/src/main/resources/gifs/nearest_neighbor.gif)
+
+P.s. A formal proof of correctness can be conducted by doing a proper mathematical proof which will not be discussed here.
+
+****
+
+**A problem must acquire two main properties to be considered a valid problem for an algorithm**
+- Contains a set of allowed input instances
+- Describes precisely the desired output
+
+****
+
+**Ways to express an algorithm**
+- English
+- [Pseudo code](https://en.wikipedia.org/wiki/Pseudocode)
+- Programming language
+
+****
+
+**Demonstrating incorrectness in an algorithm can be done by providing?**
+
+A counterexample that is verifiable and simple.
+
+****
+
+**Common structures of combinatorial "recursive objects" objects (try to model your problem by linking it to one of the following)**
+- Permutations: arrangements & ordering
+- Subsets: a selection from a set of items
+- Trees: a hierarchical relationships between items
+- Graphs: a relationship between objects
+- Points: define locations in some geometric space
+- Polygons: define regions in some geometric spaces
+- Strings: represent a sequence of characters or patterns
+
+
+****
+
+**Recursive objects**
+
+Objects that preserve the same structure even after removing or adding an element to it.
+
+****
+
+
+NOTE: Recursion is a mathematical induction in action, you prove a solution to be working for some instances of the problem then apply it to all (base case checks up for smaller instance then you apply a general case where the assumption is: if it's true for some, it would be for the rest)
+
 ## References
 - [The Algorithm Design Manual | Third edition](https://www.amazon.de/Algorithm-Design-Manual-Computer-Science/dp/3030542556/ref=asc_df_3030542556/?tag=googshopde-21&linkCode=df0&hvadid=447482713157&hvpos=&hvnetw=g&hvrand=85054541206852219&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=1004363&hvtargid=pla-927547030735&psc=1&th=1&psc=1) - Steven S.S
 - https://leetcode.com/
