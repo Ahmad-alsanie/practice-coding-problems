@@ -9,6 +9,7 @@ You can try to remove the code and write your own then run the tests.
 The purpose of this repo is not just for you to navigate through solutions and tests rather to apply what is being discussed in [study guide](#Study Guide) below and be able to tackle any problem with the right approach.
 ****
 
+
 ### How to navigate solution module
 - Each package specifies the level of questions inside
 - Each class contains different solutions for the same problem, and it has:
