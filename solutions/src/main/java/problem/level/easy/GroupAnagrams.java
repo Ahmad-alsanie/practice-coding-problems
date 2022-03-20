@@ -18,7 +18,12 @@ public class GroupAnagrams {
 
     /**
      * @Constraint
-     * Required time complexity is O(n)
+     * Required time complexity is O(NK)
+     * a string in received array cannot exceed 100 length and
+     * that's why O(NK) is more efficient than O(NlogN) with a sort solution you can accomplish O(NlogN)
+     * 1 <= words.length <= 104
+     * 0 <= words[i].length <= 100
+     * words[i] consists of lowercase English letters only.
      * */
 
     public List<List<String>> groupAnagrams(String[] words){
