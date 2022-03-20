@@ -18,7 +18,7 @@ public class GroupAnagrams {
 
     /**
      * @Constraint
-     * Required complexity is O(n)
+     * Required time complexity is O(n)
      * */
 
     public List<List<String>> groupAnagrams(String[] words){
