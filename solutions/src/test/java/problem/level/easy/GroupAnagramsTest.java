@@ -27,4 +27,15 @@ public class GroupAnagramsTest {
         Assert.assertTrue(expected.size() == actual.size());
         Assert.assertEquals(expected, actual);
     }
+
+    @Test
+    public void givenArrayOfWordsIsPassed_whenGroupAnagramsBySortTriggered_thenReturnGroupedAnagrams(){
+        List<List<String>> expected= new ArrayList<>();
+        List<List<String>> actual = anagrams.groupAnagramsBySort(new String[]{"eat","tea","tan","ate","nat","bat"});
+        expected.add(Arrays.asList("eat","tea","ate"));
+        expected.add(Arrays.asList("bat"));
+        expected.add(Arrays.asList("tan","nat"));
+        Assert.assertTrue(expected.size() == actual.size());
+        Assert.assertTrue(expected.containsAll(actual) && actual.containsAll(expected));
+    }
 }

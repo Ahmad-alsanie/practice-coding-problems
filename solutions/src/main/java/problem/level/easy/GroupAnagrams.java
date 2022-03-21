@@ -21,11 +21,12 @@ public class GroupAnagrams {
      * Required time complexity is O(NK)
      * a string in received array cannot exceed 100 length and
      * that's why O(NK) is more efficient than O(NlogN) with a sort solution you can accomplish O(NlogN)
-     * 1 <= words.length <= 104
+     * 1 <= words.length <= 10^4
      * 0 <= words[i].length <= 100
      * words[i] consists of lowercase English letters only.
      * */
 
+    //solution 1 O(NK)
     public List<List<String>> groupAnagrams(String[] words){
         Map<String, List<String>> result = new HashMap<>();
         int[] key = new int[26];
@@ -53,5 +54,21 @@ public class GroupAnagrams {
             result.get(keyString).add(word);
         }
         return new ArrayList(result.values());
+    }
+
+    //Solution 2 O(NLogN)
+    public List<List<String>> groupAnagramsBySort(String[] words){
+        HashMap<String, List<String>> anagrams = new HashMap<>();
+
+        for(String word: words){
+            char[] chars = word.toCharArray();
+            Arrays.sort(chars);
+            String key = Arrays.toString(chars);
+            if(!anagrams.containsKey(key)){
+                anagrams.put(key, new ArrayList<>());
+            }
+            anagrams.get(key).add(word);
+        }
+        return new ArrayList<>(anagrams.values());
     }
 }
