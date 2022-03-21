@@ -6,49 +6,74 @@ import java.util.Queue;
 
 public class InvertBinaryTree {
     /**
-     * @Description
-     * Given the root of a binary tree, invert the tree, and return its root.
-     *        4                         4
-     *      /   \                     /   \
-     *     2     7       ====>       7     2
-     *    / \  /  \                /  \   / \
-     *   1  3 6   9               9   6  3   1
-     * */
+     * @Description Given the root of a binary tree, invert the tree, and return its root.
+     * 4                         4
+     * /   \                     /   \
+     * 2     7       ====>       7     2
+     * / \  /  \                /  \   / \
+     * 1  3 6   9               9   6  3   1
+     */
 
-        public TreeNode invertTree(final TreeNode root) {
-            if (root == null) return null;
 
-            final Queue<TreeNode> queue = new LinkedList<>();
-            queue.add(root);
+    //Iterative solution O(n) time O(n) space
+    public TreeNode invertTree(final TreeNode root) {
+        if (root == null) return null;
 
-            while (!queue.isEmpty()) {
-                TreeNode current = queue.poll();
+        final Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
 
-                TreeNode temp = current.left;
-                current.left = current.right;
-                current.right = temp;
+        while (!queue.isEmpty()) {
+            TreeNode current = queue.poll();
 
-                if (current.left != null){
-                    queue.add(current.left);
-                }
-                if (current.right != null) {
-                    queue.add(current.right);
-                }
+            TreeNode temp = current.left;
+            current.left = current.right;
+            current.right = temp;
+
+            if (current.left != null) {
+                queue.add(current.left);
             }
-            return root;
+            if (current.right != null) {
+                queue.add(current.right);
+            }
         }
+        return root;
+    }
+
+    //recursive solution O(n) time O(n) space
+    public TreeNode invertTreeRecursively(final TreeNode root) {
+        //base case to exit recursion
+        if(root == null){
+            return null;
+        }
+        //recursive traversal until you reach the farthest leaf
+        TreeNode left = invertTree(root.left);
+        TreeNode right = invertTree(root.right);
+
+        //invert (swap left and right child)
+        root.left = right;
+        root.right = left;
+
+        //return newly constructed root -> tree
+        return root;
+    }
 
     static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
+
+        TreeNode() {
+        }
+
+        TreeNode(int val) {
+            this.val = val;
+        }
+
         TreeNode(int val, TreeNode left, TreeNode right) {
             this.val = val;
             this.left = left;
             this.right = right;
-         }
+        }
 
         @Override
         public boolean equals(Object o) {
