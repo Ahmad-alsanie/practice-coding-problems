@@ -1,4 +1,4 @@
-package problem.level.Hard;
+package problem.level.hard;
 
 public class OneEditDistanceToMatchAString {
 }

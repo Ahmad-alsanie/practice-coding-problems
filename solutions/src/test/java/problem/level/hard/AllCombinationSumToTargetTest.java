@@ -3,7 +3,7 @@ package problem.level.hard;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import problem.level.Hard.AllCombinationsSumToTarget;
+import problem.level.medium.AllCombinationsSumToTarget;
 
 import java.util.ArrayList;
 import java.util.Arrays;

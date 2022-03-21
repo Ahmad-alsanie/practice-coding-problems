@@ -1,4 +1,4 @@
-package problem.level.Hard;
+package problem.level.medium;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
