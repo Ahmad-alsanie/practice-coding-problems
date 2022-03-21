@@ -4,7 +4,7 @@ public class FindDuplicatesIntegerInPlaceWhenNumbersArePositiveAndLessThanN {
 
     /**
      * @Description
-     * Find duplicates in integer array when numbers are > 0 and less than n
+     * Find duplicates in integer array when numbers are > 0 and less than n where n is the length of array
      * @Constraint you must do this in O(n) time and O(1) space
      * */
 

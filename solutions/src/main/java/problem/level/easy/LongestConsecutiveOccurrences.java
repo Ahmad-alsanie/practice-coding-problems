@@ -17,7 +17,7 @@ public class LongestConsecutiveOccurrences {
         int maxCount = 0;
         int currentCount = 0;
         for(char current : input.toCharArray()){
-            if(current == 'a'){
+            if(current == c){
                 currentCount++;
                 maxCount = Math.max(currentCount, maxCount);
             }else {
