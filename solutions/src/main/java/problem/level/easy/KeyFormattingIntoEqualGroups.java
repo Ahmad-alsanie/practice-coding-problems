@@ -1,7 +1,5 @@
 package problem.level.easy;
 
-import java.util.Arrays;
-
 public class KeyFormattingIntoEqualGroups {
 
     /**
